@@ -19,19 +19,19 @@
 <!-- <body oncontextmenu="return false"> -->
 
 <body>
-    <header class="container d-flex flex-wrap justify-content-center py-3 mt-2 mb-4 border-bottom bg-dark shadow p-3 rounded">
+    <header class="container d-flex flex-wrap justify-content-center py-3 mt-2 mb-4 border-bottom bg-light shadow p-3 rounded">
         <a href="<?php echo base_url(); ?>" class="d-flex align-items-center me-md-auto text-decoration-none">
-            <span class="fs-4 ms-md-4 text-decoration-none text-light">Header</span>
+            <span class="fs-4 ms-md-4 text-decoration-none text-dark">Aplikasi-Ku</span>
         </a>
 
         <ul class="nav nav-pills">
-            <li class="nav-item"><a href="<?php echo base_url(); ?>" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="<?php echo base_url(); ?>" class="nav-link active bg-dark" aria-current="page">Home</a></li>
         </ul>
     </header>
     <main>
         <div class="container">
             <div class="row">
-                <div class="bg-tertiary rounded shadow mb-3">
+                <div class="bg-primary text-light rounded shadow mb-3">
                     <div class="row">
                         <div class="col-md-12">
                             <h2 class="mt-2 mb-3">
@@ -39,8 +39,12 @@
                             </h2>
                         </div>
                     </div>
-                    <div class="row row-cols-3 g-3 mb-3" id="place-for-data">
-                        <div class="col">
+                </div>
+            </div>
+            <div class="row">
+                <div class="bg-tertiary rounded shadow mb-3">
+                    <div class="row row-cols-3 g-3 mb-3 mt-3" id="place-for-data">
+                        <div class="col-md-12">
                             <table id="data_table" class="table table-striped table-bordered" width="100%">
                                 <thead>
                                     <tr>
@@ -116,6 +120,7 @@
                 "serverSide": true,
                 "bSort": false,
                 "bInfo": false,
+                "paging": false,
                 "ajax": {
                     "url": "<?php echo base_url() ?>main/get_json",
                     "type": "POST"
